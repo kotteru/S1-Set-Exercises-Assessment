@@ -1,5 +1,5 @@
 # Assessment 1: Set Exercises
-
+  *submitted by: Miguel Camilo*
 ## Repository Info
 A folder has been provided for each Set Exercise. Each folder contains the files the student will need for that exercise. They should start by reading the `README` file first. 
 
