@@ -1,7 +1,8 @@
 
 # Assessment 1: Set Exercises
   *submitted by: Miguel Camilo*
-  <img width="791" height="142" alt="image" src="https://github.com/user-attachments/assets/d622af06-abe0-4080-8799-1a7c3e72f7bb" />
+  
+<img width="791" height="142" alt="image" src="https://github.com/user-attachments/assets/d622af06-abe0-4080-8799-1a7c3e72f7bb" />
 
 ## Repository Info
 A folder has been provided for each Set Exercise. Each folder contains the files the student will need for that exercise. They should start by reading the `README` file first. 
