@@ -1,0 +1,114 @@
+/* =============================================
+   J's Gallery – styles.css
+   CSS Stylesheet for Set Exercise 3
+   Uses Flexbox for gallery layout and float
+   for the intro text/image arrangement.
+   ============================================= */
+
+/* ---------- Global Reset ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #d3d3d3; /* Light grey page background */
+    font-family:'Times New Roman', serif;
+    color: #111111;
+}
+
+/* ---------- HEADER ---------- */
+header {
+    background-color: #d3d3d3;
+    padding: 16px 20px 8px 20px;
+    text-align: center;
+}
+
+/* Large bold serif heading matching the screenshot */
+header h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+/* Navigation links spaced out in a row */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-bottom: 12px;
+}
+
+nav a {
+    color: #0000ee; /* Default browser link blue */
+    text-decoration: underline;
+    font-size: 1rem;
+}
+
+nav a:hover {
+    color: #551a8b; /* Visited purple on hover */
+}
+
+/* ---------- INTRO SECTION ---------- */
+.intro {
+    background-color: #d3d3d3;
+    padding: 12px 20px 12px 20px;
+    overflow: hidden; /* Contains the float */
+}
+
+/* Cow image floated to the right side of the text */
+.float-right {
+    float: right;
+    width: 47%;          /* Roughly half the content width */
+    height: 360px;       /* Fixed height so text wraps neatly */
+    object-fit: cover;   /* Crop rather than squash the image */
+    margin-left: 16px;
+    display: block;
+}
+
+.intro p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 14px;
+}
+
+/* Clearfix utility: clears float after the intro section */
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* ---------- GALLERY SECTION ---------- */
+/* No padding/margin so images sit edge-to-edge */
+.gallery {
+    width: 100%;
+}
+
+/* Each gallery row is a Flexbox container.
+   Items stretch to the same height with no gaps. */
+.gallery-row {
+    display: flex;
+    width: 100%;
+    height: 300px;       /* All items in a row share this fixed height */
+}
+
+/* All images and the video fill their flex cell completely */
+.gallery-row img,
+.gallery-row video {
+    flex: 1;             /* Each item grows to share available width equally */
+    height: 100%;        /* Fills the row height */
+    object-fit: cover;   /* Crops to fill without distorting aspect ratio */
+    display: block;      /* Removes inline image gap */
+}
+
+/* Row 1: Make the video wider than the image beside it */
+.gallery-row:first-child video {
+    flex: 1.4;           /* Video takes ~58% of the row width */
+}
+
+.gallery-row:first-child img {
+    flex: 1;             /* Train photo takes ~42% */
+}
